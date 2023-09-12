@@ -1,0 +1,49 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><i class="fa-solid fa-skull" style="color: #9900ff;"></i>BERRY</mat-toolbar>
+    <mat-nav-list>
+      <h5>Dashboard</h5>
+      <a mat-list-item href="#"><i class="fa-solid fa-clock"></i> Dashboard</a>
+      <hr>
+      <h5 class="title">Pages</h5>
+      <h6>Pages Caption</h6>
+      <a mat-list-item href="#"><i class="fa-solid fa-key"></i> Authentication</a>
+      <hr>
+      <h5 class="title">Utilities</h5>
+      <a mat-list-item href="#"><i class="fa-solid fa-font"></i> Typography</a>
+      <a mat-list-item href="#"><i class="fa-solid fa-palette"></i> Color </a>
+      <a mat-list-item href="#"><i class="fa-solid fa-circle-half-stroke"></i> Shadow</a>
+      <a mat-list-item href="#"><i class="fa-brands fa-slack"></i> Icons</a>
+      <hr>
+      <a mat-list-item href="#"><i class="fa-brands fa-chrome"></i> Simple Page</a>
+      <a mat-list-item href="#"><i class="fa-solid fa-question"></i> Documentation</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="white">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="navbar">
+        <div>
+          <input type="search" name="" id="" placeholder="Search">
+        </div>
+        <div>
+          <a href="#"><i class="fa-solid fa-bell" style="color: #9900ff;"></i></a>
+          <a href="#"><i class="fa-solid fa-user" style="color: gold;"></i></a>
+          <a href="#"><i class="fa-solid fa-gear" style="color: dodgerblue;"></i></a>
+        </div>
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <app-dashboard></app-dashboard>
+  </mat-sidenav-content>
+</mat-sidenav-container>
