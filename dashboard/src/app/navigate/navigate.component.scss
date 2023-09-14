@@ -18,6 +18,8 @@
 
 mat-toolbar{
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
 }
 
 mat-toolbar i{
@@ -61,5 +63,5 @@ input{
   border-radius: 15px;
   background-color: rgb(211, 211, 211);
   border: solid 2px rgb(211, 211, 211);
-  width: 350px;
+  width: 550px;
 }
