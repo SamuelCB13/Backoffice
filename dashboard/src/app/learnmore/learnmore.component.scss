@@ -19,3 +19,46 @@
 .dashboard-card-content {
   text-align: center;
 }
+
+.general{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  margin: 15px;
+}
+
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+a{
+  padding: 15px;
+  background-color: #EDA8FF;
+  border-radius: 15px;
+  margin: 50px 15px 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: solid 4px black;
+}
+
+a:hover{
+  background-color: gray;
+  color: #EDA8FF;
+  border: solid 4px #EDA8FF;
+}
+
+img{
+  width: 600px;
+  height: 400px;
+}
+
+.image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
